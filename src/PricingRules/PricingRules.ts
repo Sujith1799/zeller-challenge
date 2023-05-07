@@ -51,7 +51,7 @@ export class PricingRules {
 }
 
 /**
- * A helper function that calculates the price for a "buy X pay for Y" pricing rule.
+ * A helper function that calculates the price for a "buy X Get Y free" pricing rule.
  * @param count - The number of units of the product.
  * @param x - The number of units required to get the discount.
  * @param y - The number of units to get for free.

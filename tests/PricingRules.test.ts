@@ -41,15 +41,15 @@ describe("PricingRules", () => {
       expect(price).toBe(product.price * count);
     });
 
-    it("should apply the 'buy X pay for Y' pricing rule correctly", () => {
+    it("should apply the 'buy X get Y for free' pricing rule correctly", () => {
       const product = new Product(SKU.IPD, "Super iPad", 549.99);
 
-      // Buy 4 iPads, pay for 3.
+      // Buy 4 iPads get 1 free
       const count = 4;
       const expectedPrice = pricingRules.applyRule(product, count);
       expect(expectedPrice).toBe(product.price * 3);
 
-      // Buy 5 iPads, pay for 4.
+      // Buy 5 iPads, get 1 free
       const count2 = 5;
       const expectedPrice2 = pricingRules.applyRule(product, count2);
       expect(expectedPrice2).toBe(product.price * 4);
